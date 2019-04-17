@@ -87,18 +87,7 @@ namespace VbFinal.Tests.Controllers
 
         }
 
-        [TestMethod]
-        public void EditLoadsVbPlayerValidId()
-        {
-            // Arrange
-            //Handled in TestInitiliaze
-
-            // Act
-
-            // Assert
-
-        }
-
+      
         [TestMethod]
         public void EditInvalidId()
         {
@@ -112,31 +101,7 @@ namespace VbFinal.Tests.Controllers
             Assert.AreEqual(404, result.StatusCode);
         }
 
-        [TestMethod]
-        public void EditNoId()
-        {
-            // Arrange
-            //Handled in TestInitiliaze
-
-            // Act
-            //HttpNotFoundResult result = controller.Edit(null) as HttpNotFoundResult;
-
-            //Assert
-            //Assert.AreEqual(404, result.StatusCode);
-
-        }
-
-        [TestMethod]
-        public void EditSaveInvalid()
-        {
-            // Arrange
-            //Handled in TestInitiliaze
-
-            // Act
-
-            // Assert
-
-        }
+        
 
         [TestMethod]
         public void EditSaveValid()
