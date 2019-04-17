@@ -121,7 +121,7 @@ namespace VbFinal.Tests.Controllers
             // Act
             //HttpNotFoundResult result = controller.Edit(null) as HttpNotFoundResult;
 
-            // Assert
+            //Assert
             //Assert.AreEqual(404, result.StatusCode);
 
         }
@@ -141,12 +141,21 @@ namespace VbFinal.Tests.Controllers
         [TestMethod]
         public void EditSaveValid()
         {
-            // Arrange
-            //Handled in TestInitiliaze
+            VbPlayer vbPlayer = new VbPlayer {
+                VbPlayerId = 962,
+                FirstName = "Laura",
+                Lastname = "S",
+                Photo = "https://img.icons8.com/color/384/beach-volleyball.png"
+            };
+
+            // Arrange 
+            // handled in TestInitialize
 
             // Act
+            RedirectToRouteResult result = controller.Edit(vbPlayer) as RedirectToRouteResult;
 
             // Assert
+            Assert.AreEqual("Index", result.RouteValues["action"]);
 
         }
     }
